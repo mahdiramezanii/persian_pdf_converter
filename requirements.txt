@@ -1,0 +1,5 @@
+tqdm>=4.0.0
+pdf2image>=1.14.0
+pytesseract>=0.3.0
+Pillow>=8.0.0
+python-docx>=0.8.10
