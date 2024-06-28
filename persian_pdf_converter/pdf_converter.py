@@ -14,14 +14,15 @@ from pathlib import Path
 
 parent_path= Path(__file__).resolve().parent.parent
 
+
 def pdf_to_word(pdf_path: str, output_dir: str, lang="fas+eng", **kwargs):
     output_dir = output_dir.replace("\\", "/")
     pdf_name = f"word-{_my_random_string(6)}"
 
 
-    pages = convert_from_path(pdf_path,poppler_path=f"{parent_path}/statics/poppler-24.02/bin")
+    pages = convert_from_path(pdf_path,poppler_path=f"{parent_path}/static/poppler-24.02/bin")
 
-    pytesseract.pytesseract.tesseract_cmd = f"{parent_path}/statics/Tesseract-OCR/tesseract.exe"
+    pytesseract.pytesseract.tesseract_cmd = f"{parent_path}/static/Tesseract-OCR/tesseract.exe"
     texts = []
 
     for i, page in tqdm(enumerate(pages), position=0):

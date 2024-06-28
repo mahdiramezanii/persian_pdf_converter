@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: persian_pdf_converter
-Version: 0.1.2
+Version: 0.1.3
 Summary: convert persian pdf to .docx
 Home-page: https://github.com/mahdiramezanii/persian_pdf_converter
 Author: mahdiramezani
@@ -15,6 +15,7 @@ Requires-Dist: pdf2image
 Requires-Dist: pytesseract
 Requires-Dist: Pillow
 Requires-Dist: python-docx
+Requires-Dist: requests
 
 
 ```markdown
