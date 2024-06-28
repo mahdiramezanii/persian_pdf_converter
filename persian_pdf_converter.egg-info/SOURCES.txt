@@ -1,3 +1,4 @@
+MANIFEST.in
 README.md
 setup.py
 persian_pdf_converter/__init__.py

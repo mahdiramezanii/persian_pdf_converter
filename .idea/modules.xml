@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pdf_converter_package.iml" filepath="$PROJECT_DIR$/.idea/pdf_converter_package.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/persian_pdf_converter.iml" filepath="$PROJECT_DIR$/.idea/persian_pdf_converter.iml" />
     </modules>
   </component>
 </project>

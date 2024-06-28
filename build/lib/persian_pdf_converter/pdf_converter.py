@@ -1,3 +1,5 @@
+import os
+
 from tqdm import tqdm
 from pdf2image import convert_from_path
 import pytesseract
@@ -6,29 +8,27 @@ from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from pathlib import Path
 import tempfile
+from persian_pdf_converter import _my_random_string
 
-import uuid
+from pathlib import Path
 
-def my_random_string(string_length=10):
-    """Returns a random string of length string_length."""
-    random = str(uuid.uuid4()) # Convert UUID format to a Python string.
-    random = random.upper() # Make all characters uppercase.
-    random = random.replace("-","") # Remove the UUID '-'.
-    return random[0:string_length] # Return the random string.
-
-
+parent_path= Path(__file__).resolve().parent.parent
 
 def pdf_to_word(pdf_path: str, output_dir: str, lang="fas+eng", **kwargs):
     output_dir = output_dir.replace("\\", "/")
-    pdf_name = f"word-{my_random_string(6)}"
+    pdf_name = f"word-{_my_random_string(6)}"
 
-    pages = convert_from_path(pdf_path, **kwargs)
+
+    pages = convert_from_path(pdf_path,poppler_path=f"{parent_path}/statics/poppler-24.02/bin")
+
+    pytesseract.pytesseract.tesseract_cmd = f"{parent_path}/statics/Tesseract-OCR/tesseract.exe"
     texts = []
 
     for i, page in tqdm(enumerate(pages), position=0):
         with tempfile.TemporaryDirectory() as img_dir:
             img_name = f'{pdf_name}-{i+1}.jpg'
             img_path = Path(img_dir) / img_name
+
 
             page.save(img_path, 'JPEG')
             text = pytesseract.image_to_string(Image.open(img_path), lang=lang)
@@ -60,3 +60,4 @@ def pdf_to_word(pdf_path: str, output_dir: str, lang="fas+eng", **kwargs):
     return f'{pdf_name}.docx'
 
 
+test=pdf_to_word("C:/Users/mahdi/OneDrive/Desktop/امنیت/nmap-scriptskaliboys.com_.pdf","C:/Users/mahdi/OneDrive/Desktop/امنیت/")

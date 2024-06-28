@@ -118,6 +118,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 If you have any questions or suggestions, feel free to contact me at [your-email@example.com](mailto:your-email@example.com).
-```
-
-این فایل README شامل تمام جزئیات مورد نیاز برای نصب، تنظیم و استفاده از پکیج شما است. همچنین توضیحاتی در مورد چگونگی مشارکت در توسعه و اطلاعات تماس برای دریافت بازخورد یا پرسش‌های احتمالی قرار داده شده است.
