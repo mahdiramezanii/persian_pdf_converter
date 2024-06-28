@@ -1,6 +1,6 @@
 
 ```markdown
-# My Package
+# persian_pdf_converter
 
 A Python package for converting PDF files to Word documents and modifying URLs. This package utilizes Tesseract OCR for text recognition in PDF files.
 
@@ -19,7 +19,7 @@ A Python package for converting PDF files to Word documents and modifying URLs. 
 To install the package, use pip:
 
 ```bash
-pip install my_package
+pip install persian-pdf-converter
 ```
 
 ### Install Tesseract
@@ -41,7 +41,7 @@ export PATH=$PATH:/usr/local/bin
 Here is an example of how to use the functions provided by this package:
 
 ```python
-from my_package.converter import pdf_to_word, convert_url
+from persian_pdf_converter.pdf_converter import pdf_to_word
 
 # Path to your PDF file and output directory
 pdf_path = 'path/to/example.pdf'
@@ -50,14 +50,6 @@ output_dir = 'path/to/output/dir'
 # Convert PDF to Word
 output_file = pdf_to_word(pdf_path, output_dir, lang="fas+eng", dpi=300)
 print(f"Converted file saved as: {output_file}")
-
-# Path to the file and directory for URL conversion
-file_path = 'path/to/file'
-directory_path = 'path/to/directory'
-
-# Convert URL
-converted_url = convert_url(file_path, directory_path)
-print(f"Converted URL: {converted_url}")
 ```
 
 ### pdf_to_word Function
@@ -75,18 +67,7 @@ This function converts a PDF file to a Word document with text recognition.
 
 - `str`: Name of the output Word file.
 
-### convert_url Function
 
-This function modifies a file path based on a directory path, removing any occurrence of "media" in the directory path.
-
-#### Parameters:
-
-- `file_path` (str): The file path to be converted.
-- `directory_path` (str): The directory path used for conversion.
-
-#### Returns:
-
-- `str`: The converted URL.
 
 ## Development
 
@@ -94,11 +75,11 @@ To contribute to this project, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/my_package.git
+    git clone https://github.com/mahdiramezanii/persian_pdf_converter.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd my_package
+    cd persian_pdf_converter
     ```
 3. Create a virtual environment and activate it:
     ```bash
