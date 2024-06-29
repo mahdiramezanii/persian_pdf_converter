@@ -22,19 +22,6 @@ To install the package, use pip:
 pip install persian-pdf-converter
 ```
 
-### Install Tesseract
-
-For the `pdf_to_word` function to work correctly, you need to have Tesseract OCR installed. You can download and install Tesseract from [here](https://github.com/tesseract-ocr/tesseract). After installation, make sure Tesseract's binary path is added to your system's PATH.
-
-For Windows:
-```bash
-setx PATH "%PATH%;C:\Program Files\Tesseract-OCR"
-```
-
-For Unix-based systems (Linux, macOS):
-```bash
-export PATH=$PATH:/usr/local/bin
-```
 
 ## Usage
 

@@ -28,8 +28,9 @@ class InstallCommand(install):
 
 setup(
     name="persian_pdf_converter",
-    version="1.5.3",
+    version="2.2.1",
     packages=find_packages(),
+    package_data={'my_pkg':['my_pkg/resources/*']},
     include_package_data=True,
 
     install_requires=[
