@@ -1,5 +1,4 @@
 
-```markdown
 # persian_pdf_converter
 
 A Python package for converting PDF files to Word documents and modifying URLs. This package utilizes Tesseract OCR for text recognition in PDF files.
