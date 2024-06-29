@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: persian_pdf_converter
-Version: 1.5.3
+Version: 2.2.1
 Summary: convert persian pdf to .docx
 Home-page: https://github.com/mahdiramezanii/persian_pdf_converter
 Author: mahdiramezani
@@ -41,19 +41,6 @@ To install the package, use pip:
 pip install persian-pdf-converter
 ```
 
-### Install Tesseract
-
-For the `pdf_to_word` function to work correctly, you need to have Tesseract OCR installed. You can download and install Tesseract from [here](https://github.com/tesseract-ocr/tesseract). After installation, make sure Tesseract's binary path is added to your system's PATH.
-
-For Windows:
-```bash
-setx PATH "%PATH%;C:\Program Files\Tesseract-OCR"
-```
-
-For Unix-based systems (Linux, macOS):
-```bash
-export PATH=$PATH:/usr/local/bin
-```
 
 ## Usage
 
