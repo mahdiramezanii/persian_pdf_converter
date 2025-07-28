@@ -41,15 +41,22 @@ def pdf_to_word(pdf_path: str, output_dir: str, lang="fas+eng", **kwargs):
     'poppler_path' specifies the path to 
     the Poppler utility,
     required for PDF to image conversion.'''
-    pages = convert_from_path(pdf_path,
-                              poppler_path=f"{parent_path}/src/my_pkg/resources/poppler-24.02/bin")
+   poppler_dir = kwargs.get(
+    "poppler_path",
+    f"{parent_path}/src/my_pkg/resources/poppler-24.02/bin"
+     )
+
+    pages = convert_from_path(pdf_path, poppler_path=poppler_dir)
     # =====================================================================
 
 
     #==========================================================
     # Set the path to the Tesseract OCR executable.
-    pytesseract.pytesseract.tesseract_cmd = \
-        f"{parent_path}/src/my_pkg/resources/Tesseract-OCR/tesseract.exe"
+    pytesseract.pytesseract.tesseract_cmd = kwargs.get(
+    "tesseract_cmd",
+    f"{parent_path}/src/my_pkg/resources/Tesseract-OCR/tesseract.exe"
+    )
+
     #=====================================================================
 
     #========================================================================
